@@ -13,13 +13,13 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 800,
+                breakpoint: 960,
                 settings: {
                     slidesToShow: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 640,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -29,6 +29,17 @@ $(document).ready(function() {
     });
     $('.js-slider-banners').slick({
         dots: false,
-        infinite: true
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    arrows: false,
+                    dots: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });

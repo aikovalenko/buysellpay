@@ -3,14 +3,14 @@
 }
 .footer__top {
   padding-top: 53px;
+  margin-bottom: 59px;
 }
 .footer__top__logo {
   height: 27px;
   width: 57px;
-  background-color: deeppink;
 }
 .footer__top__subscribe {
-  margin-bottom: 59px;
+
 }
 .subscribe {
   display: flex;
@@ -30,6 +30,7 @@
   color: rgba(255, 255, 255, 1);
 }
 .subscribe__submit {
+  display: inline-block;
   padding-right: 17px;
   padding-left: 17px;
   line-height: 36px;
@@ -40,6 +41,7 @@
   font-weight: bold;
   font-family: "Lato";
   color: rgba(255, 255, 255, 1);
+  text-decoration: none;
 }
 .footer__middle {
   margin-bottom: 26px;
