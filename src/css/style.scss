@@ -11,10 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-@import "partials/header";
-@import "partials/footer";
-
 .flex-container, .main-container {
   box-sizing: border-box;
   max-width: 1200px;
@@ -34,12 +30,27 @@ body {
   }
 }
 * {
-  outline: none;
+  outline: 0;
 }
 ul {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+.dropdown {
+  position: relative;
+  select {
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgba(63, 73, 81, 1);
+  }
 }
 select {
   border:none;
@@ -57,6 +68,34 @@ select {
   display:table;
   clear:both;
 }
+
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/sideNav";
+
+.hover {
+  a {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 17px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(62, 72, 80, 1);
+    border-left: 5px solid transparent;
+    text-decoration: none;
+    transition: all .2s ease;
+    &:hover {
+      transition: all .2s ease;
+      background-color: rgba(91, 192, 235, .1);
+      border-left: 5px solid rgba(91, 192, 235, 1);
+    }
+  }
+}
+
 .featured {
   display: flex;
 }
@@ -85,9 +124,9 @@ select {
     font-weight: 400;
     color: rgba(167, 180, 191, 1);
     text-decoration: none;
-    transition: all .2s ease;
+    //transition: all .2s ease;
     &:hover {
-      transition: all .2s ease;
+      //transition: all .2s ease;
       color: rgba(91, 192, 235, 1);
       text-decoration: underline;
     }
@@ -485,7 +524,6 @@ select {
   }
   text-align: left;
   li {
-
     a {
       width: 100%;
       padding-top: 12px;
@@ -555,7 +593,6 @@ select {
   margin-top: 16px;
   border: 1px solid rgba(138, 149, 155, 0.23);
   border-radius: 6px;
-  overflow: hidden;
   font-size: 0;
   .featured__block__title {
     text-align: center;
@@ -664,6 +701,7 @@ select {
   display: none !important;
   .btn--view-all {
     display: flex;
+    justify-content: space-between;
     //width: 100%;
     margin-bottom: 10px;
     margin-right: -6px;
@@ -676,9 +714,14 @@ select {
     font-weight: 700;
     color: rgba(62, 72, 80, 1);
     text-decoration: none;
+    .icon-arrow-right {
+      line-height: 44px;
+      font-size: 14px;
+    }
   }
   .btn--to-top {
     display: flex;
+    justify-content: space-between;
     //width: 100%;
     margin-bottom: 9px;
     margin-right: -6px;
@@ -691,19 +734,52 @@ select {
     font-weight: 700;
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
+    .icon-arrow-right {
+      line-height: 44px;
+      font-size: 14px;
+    }
   }
 }
 .panel-control {
+  opacity: 0;
   position: absolute;
-  top: 85px;
-  right: -6px;
+  top: 50%;
+  right: 0;
   width: 50px;
   height: 100px;
-  background-color: rgba(62, 72, 80, .8);
+  margin-top: -25px;
+  background-color: rgba(62, 72, 80, .7);
   border-radius: 15px 0 0 15px;
-  z-index: 9999;
+  z-index: 2;
+  transition: $all2;
+  &:hover {
+    transition: $all2;
+    background-color: rgba(62, 72, 80, .9);
+  }
+  .icon-heart-full {
+    color: rgba(255, 88, 100, 1);
+  }
 }
-
+.panel-control__btn {
+  display: table;
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  .icon {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 22px;
+  }
+}
+.with-panel {
+  &:hover {
+    .panel-control {
+      opacity: 1;
+    }
+  }
+}
 @media screen and (min-width: 680px) and (max-width: 960px) {
   .categories__left {
     width: 30%;
@@ -740,9 +816,45 @@ select {
     }
   }
 }
+.header__top__mobile-view {
+  display: none;
+}
+.button-collapse {
+  outline: 0;
+}
 @media screen and (max-width: 680px) {
   .mobile-view {
     display: block !important;
+  }
+  .mobile-view-flex {
+    display: flex !important;
+  }
+  .header__top__mobile-view {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(62, 72, 80, 1);
+    display: flex;
+    height: 66px;
+    justify-content: space-between;
+    .header__top__control {
+      height: 66px;
+      text-align: center;
+      .icon {
+        margin: 0 auto;
+      }
+    }
+    .block--logo {
+      flex: 1;
+      img {
+        margin-top: 12px;
+      }
+    }
+  }
+  .header__top__control__item--burger {
+    .icon {
+      font-size: 20px;
+    }
   }
   .desktop-view {
     display: none !important;
@@ -888,5 +1000,9 @@ select {
   }
   .subscribe__submit {
     border-radius: 2px;
+  }
+  .panel-control {
+    right: -6px;
+    opacity: 1;
   }
 }

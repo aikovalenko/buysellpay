@@ -32,7 +32,7 @@ $(document).ready(function() {
         infinite: true,
         responsive: [
             {
-                breakpoint: 600,
+                breakpoint: 681,
                 settings: {
                     arrows: false,
                     dots: true,
@@ -41,5 +41,8 @@ $(document).ready(function() {
                 }
             }
         ]
+    });
+    $(".button-collapse").sideNav({
+        draggable: true
     });
 });

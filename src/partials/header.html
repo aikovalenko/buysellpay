@@ -1,6 +1,95 @@
 <header id="header" class="header">
+    <ul id="slide-out" class="side-nav">
+        <li class="top side-nav__logo">
+            <a href="" class="middle">
+                <img height="42" src="../img/logo-main-white.svg">
+            </a>
+        </li>
+        <li class="top side-nav__marketplace">
+            <a href="" class="middle">
+                <span class="text">Marketplace</span>
+            </a>
+        </li>
+        <li class="top side-nav__classifields">
+            <a href="" class="middle">
+                <span class="text">Classifields</span>
+                <span class="indicator">32</span>
+            </a>
+        </li>
+        <li class="top side-nav__social">
+            <a href="" class="middle">
+                <span class="text">Social</span>
+                <span class="indicator">3</span>
+            </a>
+        </li>
+        <li class="control">
+            <a href="" class="middle">
+                <i class="icon icon-cart"></i>
+                <span class="text">Cart</span>
+                <span class="indicator">3</span>
+            </a>
+        </li>
+        <li class="control">
+            <a href="" class="middle">
+                <i class="icon icon-bell"></i>
+                <span class="text">Notifications</span>
+                <span class="indicator">3</span>
+            </a>
+        </li>
+        <li class="control">
+            <a href="" class="middle">
+                <i class="icon icon-envelope"></i>
+                <span class="text">Messages</span>
+                <span class="indicator">3</span>
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="control">
+            <a href="" class="middle">
+                <i class="icon icon-profile"></i>
+                <span class="text">Profile</span>
+            </a>
+        </li>
+        <li class="control">
+            <a href="" class="middle">
+                <i class="icon icon-geo"></i>
+                <span class="text">Location / Currency</span>
+            </a>
+        </li>
+        <li class="divider"></li>
+        <li class="control">
+            <div class="header__top__signin">
+                <a href="" class="btn-signin">SIGN IN / SIGN UP</a>
+            </div>
+        </li>
+    </ul>
     <div class="header__top">
-        <div class="flex-container">
+        <div class="header__top__mobile-view">
+            <div class="block">
+                <div class="header__top__control">
+                    <a href="" class="header__top__control__item header__top__control__item--burger button-collapse" data-activates="slide-out">
+                        <i class="icon icon-burger"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="block block--logo">
+                <div class="header__top__control">
+                    <a href="" class=""><img height="42" src="../img/logo-main-white.svg"></a>
+                </div>
+            </div>
+            <div class="block">
+                <div class="header__top__control">
+                    <a href="" class="header__top__control__item header__top__control__item--cart">
+                        <i class="icon icon-cart"></i>
+                    </a>
+                    <a href="" class="header__top__control__item header__top__control__item--search">
+                        <i class="icon icon-search"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-container desktop-view">
             <div class="block">
                 <div class="header__top__menu">
                     <a href="" class="header__top__menu__item header__top__menu__item--marketplace active">
@@ -17,18 +106,18 @@
                     </a>
                 </div>
             </div>
-            <div class="block ">
+            <div class="block">
                 <div class="header__top__control">
                     <a href="" class="header__top__control__item header__top__control__item--cart">
                         <i class="icon icon-cart"></i>
                         <span class="indicator">12</span>
                     </a>
                     <a href="" class="header__top__control__item header__top__control__item--notifications">
-                        <i class="icon icon-notifications"></i>
+                        <i class="icon icon-bell"></i>
                         <span class="indicator">32</span>
                     </a>
                     <a href="" class="header__top__control__item header__top__control__item--messages">
-                        <i class="icon icon-messages"></i>
+                        <i class="icon icon-envelope"></i>
                         <span class="indicator">22</span>
                     </a>
                 </div>
@@ -41,6 +130,13 @@
                         <i class="icon icon-profile"></i>
                         <span class="indicator"></span>
                     </a>
+                    <div class="dropdow--profile hover">
+                        <ul>
+                            <li><a href="">my profile</a></li>
+                            <li><a href="">settings</a></li>
+                            <li><a href="">logout</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,6 +153,7 @@
                             <option>All</option>
                             <option>Very very long text</option>
                         </select>
+                        <i class="icon icon-arrow-down-small"></i>
                     </div>
                     <input class="search__input" placeholder="How can we help you today?">
                     <div class="dropdown dropdown--categories">
@@ -64,6 +161,7 @@
                             <option>All Categories</option>
                             <option>Very very long text</option>
                         </select>
+                        <i class="icon icon-arrow-down-small"></i>
                     </div>
                     <button class="search__submut" type="submit"><i class="icon icon-search"></i></button>
                 </form>
@@ -87,9 +185,9 @@
             <div class="dropdown header__bottom__dropdown">
                 <select>
                     <option>All Categories</option>
-                    <option>Very very long text</option>
+                    <option>Very very longlonglong text</option>
                 </select>
-
+                <i class="icon icon-arrow-down-big"></i>
             </div>
             <nav class="header__bottom__nav">
                 <a href="" class="header__bottom__nav__item">Today’s Deals</a>
