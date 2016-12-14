@@ -16,6 +16,21 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-bag:before {
+	content: "\e916";
+}
+.icon-arrow-right:before {
+	content: "\e902";
+}
+.icon-house:before {
+	content: "\e915";
+}
+.icon-like:before {
+	content: "\e913";
+}
+.icon-chat:before {
+	content: "\e914";
+}
 .icon-search:before {
 	content: "\e907";
 }
@@ -24,9 +39,6 @@
 }
 .icon-heart-full:before {
 	content: "\e901";
-}
-.icon-arrow-right:before {
-	content: "\e902";
 }
 .icon-blocks:before {
 	content: "\e903";
@@ -72,6 +84,15 @@
 }
 .icon-burger:before {
 	content: "\e912";
+}
+.icon-star-empty:before {
+	content: "\e9d7";
+}
+.icon-star-half:before {
+	content: "\e9d8";
+}
+.icon-star-full:before {
+	content: "\e9d9";
 }
 .icon-facebook:before {
 	content: "\ea90";
