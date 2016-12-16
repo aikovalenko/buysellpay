@@ -15,9 +15,20 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
-
+.icon-delete:before {
+	content: "\e917";
+}
+.icon-lock:before {
+	content: "\e918";
+}
+.icon-rename:before {
+	content: "\e919";
+}
 .icon-bag:before {
 	content: "\e916";
+}
+.icon-arrow-left:before {
+	content: "\e91a";
 }
 .icon-arrow-right:before {
 	content: "\e902";
@@ -100,6 +111,12 @@
 .icon-instagram:before {
 	content: "\ea92";
 }
+.icon-twitter:before {
+	content: "\ea96";
+}
 .icon-vimeo:before {
 	content: "\eaa0";
+}
+.icon-linkedin2:before {
+	content: "\eaca";
 }

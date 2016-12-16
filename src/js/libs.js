@@ -4,3 +4,4 @@
 //= ../libs/fancybox/source/jquery.fancybox.pack.js
 //= ../libs/luminous-master/dist/Luminous.min.js
 //= ../libs/drift-master/dist/Drift.min.js
+//= ../libs/fastclick/lib/fastclick.js

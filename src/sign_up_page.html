@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+@@include('partials/head.html')
+<body>
+<div class="wrapper">
+    <div class="page sing_up_page">
+
+        @@include('partials/header.html')
+
+        <div class="main-container col1-layout">
+            <div class="main">
+                <section class="breadcrumbs desktop-view">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><span class="divider">></span></li>
+                        <li><a href="">Sign Up</a></li>
+                        <li><span class="divider">></span></li>
+                        <li><span class="active-step">Step 1: Sign Up</span></li>
+                        <li><span class="divider non-active">></span></li>
+                        <li><span class="non-active">Step 2: Import Conacts</span></li>
+                        <li><span class="divider non-active">></span></li>
+                        <li><span class="non-active">Step 3: Setup Wishlist</span></li>
+                    </ul>
+                </section>
+                <section class="mobile-view">
+                    <a href="" class="btn--view-all">
+                        <span>All Categories</span>
+                        <i class="icon icon-arrow-right"></i>
+                    </a>
+                </section>
+                <section class="sing-in">
+                    <div class="sing-in__inner">
+                        <div class="sing-in__block">
+                            <div class="sing-in__block__form">
+                                <div class="sing-up__block__form__inner">
+                                    <h1>Sign Up</h1>
+                                    <form id="sing-up" class="form--sing-up">
+                                        <div class="form-input">
+                                            <label for="sing-up--email">Email</label>
+                                            <input type="text" id="sing-up--email" name="sing-up--email" class="form--sing-up__input input-text" placeholder="Type your email">
+                                        </div>
+                                        <div class="form-input">
+                                            <label for="sing-up--password">Password</label>
+                                            <input type="text" id="sing-up--password" name="sing-up--password" class="form--sing-up__input input-text" placeholder="Choose password">
+                                        </div>
+                                        <div class="form-input">
+                                            <label for="sing-up--confirm">Confirm</label>
+                                            <input type="text" id="sing-up--confirm" name="sing-up--confirm" class="form--sing-up__input input-text" placeholder="Confirm">
+                                        </div>
+                                        <div class="form-input">
+                                            <label for="sing-up--name">Name</label>
+                                            <input type="text" id="sing-up--name" name="sing-up--name" class="form--sing-up__input input-text" placeholder="Type your name">
+                                        </div>
+                                        <div class="form-input">
+                                            <label for="sing-up--last-name">Last Name</label>
+                                            <input type="text" id="sing-up--last-name" name="sing-up--last-name" class="form--sing-up__input input-text" placeholder="Type your name">
+                                        </div>
+                                        <div class="form-select__wrapper">
+                                            <div class="form-select">
+                                                <label for="sing-up--age">Age</label>
+                                                <div class="input-select__wrapper">
+                                                  <select class="input-select" id="sing-up--age">
+                                                      <option>Selelct</option>
+                                                  </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-select">
+                                                <label for="sing-up--sex">Sex</label>
+                                                <div class="input-select__wrapper">
+                                                  <select class="input-select" id="sing-up--sex">
+                                                      <option>Selelct</option>
+                                                  </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button class="btn-sing-in btn-sing-up"><span>SIGN UP</span></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sing-in__block remember-password mobile-view">
+                                <span>
+                                    So you can’t get in to your account?<br>Did you <a href="" class=""> forget your password</a>?
+                                </span>
+                            </div>
+                            <div class="sing-in__block__vendors">
+                                <div class="sing-in__block__vendors__inner">
+                                    <span class="text text--hint">If you already have an account click the button below to Sign In.</span>
+                                    <a href="" class="btn-sing-in">SIGN IN</a>
+                                    <span class="text text--center text--or">OR</span>
+                                    <div class="sing-in__block__vendors__social">
+                                        <a href="" class="btn-sing-in btn-sing-in--facebook">
+                                            <i class="icon icon-facebook"></i>
+                                            <span>SIGN IN WITH FACEBOOK</span>
+                                        </a>
+                                        <a href="" class="btn-sing-in btn-sing-in--twitter">
+                                            <i class="icon icon-twitter"></i>
+                                            <span>SIGN IN WITH TWITTER</span>
+                                        </a>
+                                        <a href="" class="btn-sing-in btn-sing-in--linkedin">
+                                            <i class="icon icon-linkedin2"></i>
+                                            <span>SIGN IN WITH LINKEDIN</span></a>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sing-in__block remember-password desktop-view">
+                            <span>
+                                So you can’t get in to your account? Did you <a href="" class=""> forget your password</a>?
+                            </span>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                @@include('partials/standart.html')
+            </div>
+        </div>
+        @@include('partials/footer.html')
+    </div>
+</div>
+</body>
+</html>

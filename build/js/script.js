@@ -49,7 +49,7 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 640,
+                breakpoint: 681,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -77,7 +77,7 @@ $(document).ready(function() {
                 }
             },
             {
-                breakpoint: 640,
+                breakpoint: 681,
                 settings: {
                     dots: true,
                     arrows: false,
@@ -118,6 +118,16 @@ $(document).ready(function() {
             }
         ]
     });
+    $('.js-items-slider').slick({
+        dots: false,
+        arrows: true,
+        infinite: false,
+        swipe: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: '<div class="items-next items-arrow"></i><span>Next</span><i class="icon icon-arrow-right"></div>',
+        prevArrow: '<div class="items-prev items-arrow"><i class="icon icon-arrow-left"></i><span>PREVIOUS</span></div>',
+    });
     $(".button-collapse").sideNav({
         // draggable: true
     });
@@ -134,13 +144,7 @@ $(document).ready(function() {
             inlinePane: false
         });
     });
-    var demoTrigger = document.querySelector('.demo-trigger');
-    var paneContainer = document.querySelector('.product-card__desc');
 
-    new Drift(demoTrigger, {
-        paneContainer: paneContainer,
-        inlinePane: false
-    });
 
     function close_accordion_section() {
         jQuery('.accordion .accordion-section-title').removeClass('active');
@@ -164,4 +168,40 @@ $(document).ready(function() {
 
         e.preventDefault();
     });
+
+    //truncates
+    function truncate(html, lenght) {
+       html.each(function(){
+           var original_text = $(this).text();
+           if (original_text.length > lenght) {
+               var truncated_text = $.trim(original_text).substring(0, lenght).split(" ").slice(0, -3).join(" ") + "...";
+           }
+           $(this).html(truncated_text);
+        });
+    }
+    truncate($('.js-truncate-product-name'), 66);
+    if ($( window ).width() < 681) {
+        truncate($('.js-truncate-product-name'), 40);
+    }
+    //truncates end
+
+
+    if ($( window ).width() < 681) {
+        var divs = $(".products > .item-card");
+        for(var i = 0; i < divs.length; i+=2) {
+            divs.slice(i, i+2).wrapAll("<div class='slide'></div>");
+        }
+        $('.products').addClass('js-items-slider items-slider');
+        $('.js-items-slider').slick({
+            dots: false,
+            arrows: true,
+            infinite: false,
+            swipe: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            nextArrow: '<div class="items-next items-arrow"></i><span>Next</span><i class="icon icon-arrow-right"></div>',
+            prevArrow: '<div class="items-prev items-arrow"><i class="icon icon-arrow-left"></i><span>PREVIOUS</span></div>',
+        });
+    }
+
 });

@@ -12,13 +12,13 @@
                         <section class="breadcrumbs desktop-view">
                             <ul>
                                 <li><a href="">Home</a></li>
-                                <li><span>></span></li>
+                                <li><span class="divider">></span></li>
                                 <li><a href="">Categories</a></li>
-                                <li><span>></span></li>
+                                <li><span class="divider">></span></li>
                                 <li><a href="">Woman Clothing</a></li>
-                                <li><span>></span></li>
+                                <li><span class="divider">></span></li>
                                 <li><a href="">Coats & Jackets</a></li>
-                                <li><span>></span></li>
+                                <li><span class="divider">></span></li>
                                 <li><a href="">Fur & Faux Fur</a></li>
                             </ul>
                         </section>
@@ -808,5 +808,14 @@
                 @@include('partials/footer.html')
             </div>
         </div>
+    <script>
+        var demoTrigger = document.querySelector('.demo-trigger');
+        var paneContainer = document.querySelector('.product-card__desc');
+
+        new Drift(demoTrigger, {
+            paneContainer: paneContainer,
+            inlinePane: false
+        });
+    </script>
     </body>
 </html>
