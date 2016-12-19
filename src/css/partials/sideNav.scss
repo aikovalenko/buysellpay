@@ -21,7 +21,7 @@
   //height: -moz-calc(100%);
   padding-bottom: 60px;
   background-color: transparent;
-  z-index: 999;
+  z-index: 9999;
   overflow-y: auto;
   will-change: transform;
   -webkit-backface-visibility: hidden;
@@ -114,4 +114,7 @@
   position: fixed;
   top: 0;
   z-index: 998;
+}
+#sidenav-overlay {
+  z-index: 9990;
 }

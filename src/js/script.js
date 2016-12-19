@@ -129,7 +129,7 @@ $(document).ready(function() {
         prevArrow: '<div class="items-prev items-arrow"><i class="icon icon-arrow-left"></i><span>PREVIOUS</span></div>',
     });
     $(".button-collapse").sideNav({
-        // draggable: true
+        draggable: false
     });
     $(".tabs").lightTabs();
     $(".thumbs img").click(function() {
@@ -203,5 +203,10 @@ $(document).ready(function() {
             prevArrow: '<div class="items-prev items-arrow"><i class="icon icon-arrow-left"></i><span>PREVIOUS</span></div>',
         });
     }
-
+    $('a.btn--to-top').click(function() {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
 });

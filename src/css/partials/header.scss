@@ -317,8 +317,9 @@
     }
     .icon {
       font-size: 7px;
-      top: 17px;
+      top: 50%;
       right: 7px;
+      margin-top: -4px;
     }
   }
   .dropdown--all {
@@ -374,6 +375,7 @@
   select {
     padding: 0 30px;
     line-height: 42px;
+    height: 42px; //for mozilla
   }
   .icon {
     top: 18px;
