@@ -3149,3 +3149,309 @@ select {
     }
   }
 }
+.collapsible--type1 {
+  .featured__block__title {
+    padding-left: 12px;
+    padding-right: 9px;
+    transition: $all2;
+    transition-delay: .2s;
+    cursor: pointer;
+    .name {
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    .view-more {
+      font-size: 14px;
+    }
+  }
+  .icon {
+    font-size: 7px;
+    margin-right: 5px;
+  }
+}
+.collapsible {
+  .active {
+    .icon {
+      transform: rotate(180deg);
+    }
+    .featured__block__title {
+      //border: none;
+      //transition: $all2;
+      //transition-delay: .2s;
+    }
+  }
+  .featured__block__title {
+    border-top: 1px solid rgba(138, 149, 155, 0.23);
+  }
+  li:first-child .featured__block__title {
+    border: none;
+  }
+  .collapsible-body {
+    position: relative;
+    text-align: center;
+  }
+  form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .form-control {
+      position: relative;
+      display: inline-block;
+      min-height: 26px;
+      width: 58px;
+      margin-right: 5px;
+      margin-left: 5px;
+      margin-bottom: 13px;
+    }
+  }
+  form.form-list {
+    text-align: left;
+    width: 100%;
+    .form-control {
+      width: 100%;
+      padding-left: 15px;
+      box-sizing: border-box;
+      label {
+        margin-left: 12px;
+      }
+    }
+  }
+}
+
+
+
+
+
+.form-sizes {
+  /* Base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: attr(data-info);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 26px;
+    width: 58px;
+    border: 1px solid rgba(62, 72, 80, .5);
+    border-radius: 13px;
+    background: #fff;
+
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(62, 72, 80, 1);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  [type="checkbox"]:checked + label:before {
+    background-color: rgba(216, 216, 216, 1);
+    border: 1px solid rgba(67, 82, 93, 1);
+  }
+
+  ///* checked mark aspect */
+  //[type="checkbox"]:not(:checked) + label:after,
+  //[type="checkbox"]:checked + label:after {
+  //  content: '✔';
+  //  position: absolute;
+  //  top: 3px; left: 4px;
+  //  font-size: 18px;
+  //  line-height: 0.8;
+  //  color: #09ad7e;
+  //  transition: all .2s;
+  //}
+  ///* checked mark aspect changes */
+  //[type="checkbox"]:not(:checked) + label:after {
+  //  opacity: 0;
+  //  transform: scale(0);
+  //}
+  //[type="checkbox"]:checked + label:after {
+  //  opacity: 1;
+  //  transform: scale(1);
+  //}
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+
+  }
+
+  /* hover style just for information */
+  label:hover:before {
+    border: 1px solid rgba(67, 82, 93, 1) !important;
+  }
+}
+.form-colors {
+  /* Base for label styling */
+  [type="checkbox"]:not(:checked),
+  [type="checkbox"]:checked {
+    position: absolute;
+    left: -9999px;
+  }
+  [type="checkbox"]:not(:checked) + label,
+  [type="checkbox"]:checked + label {
+    padding-left: 25px;
+    cursor: pointer;
+  }
+
+  /* checkbox aspect */
+  [type="checkbox"]:not(:checked) + label:before,
+  [type="checkbox"]:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 26px;
+    width: 58px;
+    border: 1px solid rgba(62, 72, 80, .5);
+    border-radius: 13px;
+
+
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(62, 72, 80, 1);
+    text-transform: uppercase;
+    text-align: center;
+  }
+  [type="checkbox"]:checked + label:before {
+    background-color: rgba(216, 216, 216, 1);
+    border: 1px solid rgba(67, 82, 93, 1);
+    content: '✔';
+  }
+  [type="checkbox"]:not(:checked) + label.timberwolf:before,
+  [type="checkbox"]:checked + label.timberwolf:before {
+      background-color: #d8d8d8;
+  }
+  [type="checkbox"]:not(:checked) + label.scarlet:before,
+  [type="checkbox"]:checked + label.scarlet:before {
+      background-color: #ff2500;
+  }
+
+  ///* checked mark aspect */
+  //[type="checkbox"]:checked + label:after {
+  //
+  //  position: absolute;
+  //  top: 3px; left: 4px;
+  //  font-size: 18px;
+  //  line-height: 0.8;
+  //  color: #09ad7e;
+  //  transition: all .2s;
+  //  text-align: center;
+  //}
+  ///* checked mark aspect changes */
+  //[type="checkbox"]:not(:checked) + label:after {
+  //  opacity: 0;
+  //  transform: scale(0);
+  //}
+  //[type="checkbox"]:checked + label:after {
+  //  opacity: 1;
+  //  transform: scale(1);
+  //}
+  /* disabled checkbox */
+  [type="checkbox"]:disabled:not(:checked) + label:before,
+  [type="checkbox"]:disabled:checked + label:before {
+    box-shadow: none;
+    border-color: #bbb;
+    background-color: #ddd;
+  }
+  [type="checkbox"]:disabled:checked + label:after {
+    color: #999;
+  }
+  [type="checkbox"]:disabled + label {
+    color: #aaa;
+  }
+  /* accessibility */
+  [type="checkbox"]:checked:focus + label:before,
+  [type="checkbox"]:not(:checked):focus + label:before {
+
+  }
+
+  /* hover style just for information */
+  label:hover:before {
+    border: 1px solid rgba(67, 82, 93, 1) !important;
+  }
+}
+
+
+//http://lea.verou.me/2011/08/accessible-star-rating-widget-with-pure-css/
+.form-ratings {
+  display: flex;
+  margin-top: 0 !important;
+  margin-bottom: 0!important;
+  .rating {
+    border: none;
+    text-align: left;
+  }
+
+  /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t
+     follow these rules. Every browser that supports :checked also supports :not(), so
+     it doesn’t make the test unnecessarily selective */
+  .rating:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+    clip:rect(0,0,0,0);
+  }
+
+  .rating:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    color:#ddd;
+    font-size: 20px;
+    margin-right: 3px;
+  }
+
+  .rating:not(:checked) > label:before {
+    content: '\e9d9';
+    font-family: 'icomoon' !important;
+  }
+
+  .rating > input:checked ~ label {
+    color: #f70;
+  }
+
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: gold;
+  }
+
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #ea0;
+  }
+
+  .rating > label:active {
+    position:relative;
+    top:2px;
+    left:2px;
+  }
+}
