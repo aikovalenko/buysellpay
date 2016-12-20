@@ -187,11 +187,11 @@ $(document).ready(function() {
 
 
     if ($( window ).width() < 681) {
-        var divs = $(".products > .item-card");
+        var divs = $(".products__wrapper > .item-card");
         for(var i = 0; i < divs.length; i+=2) {
             divs.slice(i, i+2).wrapAll("<div class='slide'></div>");
         }
-        $('.products').addClass('js-items-slider items-slider');
+        $('.products__wrapper').addClass('js-items-slider items-slider');
         $('.js-items-slider').slick({
             dots: false,
             arrows: true,
