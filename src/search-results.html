@@ -3,7 +3,7 @@
 @@include('partials/head.html')
 <body>
 <div class="wrapper">
-    <div class="page category_page">
+    <div class="page search_page">
 
         @@include('partials/header.html')
 
@@ -36,29 +36,20 @@
                         <i class="icon icon-arrow-right"></i>
                     </a>
                 </section>
-                <div class="columns-wrapper">
-                    <aside class="filters filters--category">
-                        <div class="categories__list">
-                            <div class="categories__list__title featured__block__title   featured__block__title--default">COATS AND JACKETS</div>
-                            <ul class="categories__list__links">
-                                <li><a href="">Casual Dresses</a></li>
-                                <li><a href="">Cardigans</a></li>
-                                <li><a href="">Autumn Dresses</a></li>
-                                <li><a href="">Coat & Jackets</a></li>
-                                <li><a href="">Sweaters</a></li>
-                                <li><a href="">Blouses & Shirts</a></li>
-                                <li><a class="active" href="">T-Shirts</a></li>
-                                <li><a href="">Accessories</a></li>
-                                <li><a href="">Shoes</a></li>
-                            </ul>
-                        </div>
-                        <ul class="collapsible collapsible--type1" data-collapsible="expandable">
-                            <li class="">
-                                <div class="collapsible-header  featured__block__title">
-                                    <span class="name"><i class="icon icon-arrow-down-big"></i>SIZES</span>
-                                    <a class="view-more" href="">View More</a>
-                                </div>
-                                <div class="collapsible-body" style="display: none;">
+                <section class="search-panel desktop-view">
+                    <div class="search-panel__inner">
+                        <!--<div class="search-panel__inner__filter">-->
+                            <!--<div class="name js-search-panel__inner__filter"><span>Brand</span><i class="icon icon-arrow-down-small"></i></div>-->
+                            <!--<div class="search-dropdown">sd</div>-->
+                        <!--</div>-->
+                        <!--<div class="search-panel__inner__filter">-->
+                            <!--<div class="name js-search-panel__inner__filter"><span>Size</span><i class="icon icon-arrow-down-small"></i></div>-->
+                            <!--<div class="search-dropdown">sd</div>-->
+                        <!--</div>-->
+                        <ul class="collapsible" data-collapsible="accordion">
+                            <li class="search-panel__inner__filter">
+                                <div class="collapsible-header name"><span>Sizes</span><i class="icon icon-arrow-down-small"></i></div>
+                                <div class="collapsible-body search-dropdown" style="display: none;">
                                     <form action="#" class="form-sizes">
                                         <div class="form-control">
                                             <input type="checkbox" id="size_xxxs" />
@@ -99,53 +90,73 @@
                                     </form>
                                 </div>
                             </li>
-                            <li class="">
-                                <div class="collapsible-header  featured__block__title">
-                                    <span class="name"><i class="icon icon-arrow-down-big"></i>COLORS</span>
-                                    <a class="view-more" href="">View More</a>
-                                </div>
-                                <div class="collapsible-body" style="display: none;">
-                                    <form action="#" class="form-colors">
+                            <li class="search-panel__inner__filter">
+                                <div class="collapsible-header name"><span>Brand</span><i class="icon icon-arrow-down-small"></i></div>
+                                <div class="collapsible-body search-dropdown" style="display: none;">
+                                    <form action="#" class="form-list">
                                         <div class="form-control">
-                                            <input type="checkbox" id="timberwolf" />
-                                            <label class="timberwolf" for="timberwolf"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_xxs" />
-                                            <label class="scarlet" for="size_xxs" data-info="xxs"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_xs" />
-                                            <label for="size_xs" data-info="xs"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_s" />
-                                            <label for="size_s" data-info="s"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_m" />
-                                            <label for="size_m" data-info="m"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_l" />
-                                            <label for="size_l" data-info="l"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_xl" />
-                                            <label for="size_xl" data-info="xl"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_xxl" />
-                                            <label for="size_xxl" data-info="xxl"></label>
-                                        </div>
-                                        <div class="form-control">
-                                            <input type="checkbox" id="size_xxxl" />
-                                            <label for="size_xxxl" data-info="xxxl"></label>
+                                            <input type="checkbox" id="brand_1" />
+                                            <label class="" for="brand_1">Lucky Brand</label>
                                         </div>
                                     </form>
                                 </div>
                             </li>
-                            <li class="">
+                            <li class="search-panel__inner__filter">
+                                <div class="collapsible-header name"><span>Pattern</span><i class="icon icon-arrow-down-small"></i></div>
+                                <div class="collapsible-body search-dropdown" style="display: none;">
+                                    ?
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <div class="columns-wrapper">
+                    <aside class="filters filters--wishlist">
+                        <div class="filters--wishlist__header featured__block__title--default">
+                            ALL CATEGORIES
+                        </div>
+                        <ul class="collapsible " data-collapsible="expandable">
+                            <li class="collapsible--type2">
+                                <div class="collapsible-header  featured__block__title">
+                                    <span class="name">WOMAN CLOTHING<i class="icon icon-arrow-down-big"></i></span>
+                                </div>
+                                <div class="collapsible-body" style="display: none;">
+                                    <div class="categories__list">
+                                    <ul class="categories__list__links">
+                                        <li><a href="">Casual Dresses</a></li>
+                                        <li><a href="">Cardigans</a></li>
+                                        <li><a href="">Autumn Dresses</a></li>
+                                        <li><a href="">Coat & Jackets</a></li>
+                                        <li><a href="">Sweaters</a></li>
+                                        <li><a href="">Blouses & Shirts</a></li>
+                                        <li><a class="active" href="">T-Shirts</a></li>
+                                        <li><a href="">Accessories</a></li>
+                                        <li><a href="">Shoes</a></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collapsible--type2">
+                                <div class="collapsible-header active featured__block__title">
+                                    <span class="name">ELECTRONICS<i class="icon icon-arrow-down-big"></i></span>
+                                </div>
+                                <div class="collapsible-body" style="display: none;">
+                                    <div class="categories__list">
+                                    <ul class="categories__list__links">
+                                        <li><a href="">Casual Dresses</a></li>
+                                        <li><a href="">Cardigans</a></li>
+                                        <li><a href="">Autumn Dresses</a></li>
+                                        <li><a href="">Coat & Jackets</a></li>
+                                        <li><a href="">Sweaters</a></li>
+                                        <li><a href="">Blouses & Shirts</a></li>
+                                        <li><a class="active" href="">T-Shirts</a></li>
+                                        <li><a href="">Accessories</a></li>
+                                        <li><a href="">Shoes</a></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="collapsible--type1">
                                 <div class="collapsible-header active featured__block__title">
                                     <span class="name"><i class="icon icon-arrow-down-big"></i>Rating</span>
                                 </div>
@@ -161,8 +172,8 @@
                                     </form>
                                 </div>
                             </li>
-                            <li class="">
-                                <div class="collapsible-header active featured__block__title">
+                            <li class="collapsible--type1">
+                                <div class="collapsible-header featured__block__title">
                                     <span class="name"><i class="icon icon-arrow-down-big"></i>BRANDS</span>
                                     <a class="view-more" href="">View More</a>
                                 </div>
@@ -175,31 +186,18 @@
                                     </form>
                                 </div>
                             </li>
-
                         </ul>
                     </aside>
                     <section class="products">
-                        <div class="products__control desktop-view">
-                            <div class="products__control__hot">
-                                <div class="products__control__name">
-                                    HOT NOW
-                                </div>
-                                <ul class="products__control__list">
-                                    <li><a href="">Dresses and Coats</a></li>
-                                    <li><a href="">Fur Sweetshots</a></li>
-                                    <li><a href="">Jackets and coats</a></li>
-                                    <li><a href="">Bottoms</a></li>
-                                    <li><a href="">Some Category</a></li>
-                                    <li><a href="">Some Category</a></li>
-                                </ul>
-                            </div>
+                        <div class="products__control">
+
                         </div>
                         <div class="products__wrapper">
                         <div class="item-card item-card--type-1">
-                            <div class="item-card__discount">70%</div>
+                            <div class="item-card__discount"></div>
                             <div class="item-card__like"><i class="icon icon-heart"></i></div>
                             <div class="item-card__image">
-                                <a href="" class="image" style="background-image: url('http://placehold.it/300x200')"></a>
+                                <a href="" class="image" style="background-image: url('http://placehold.it/312x299')"></a>
                                 <div class="panel-sizes">
                                     <ul>
                                         <li><a href="" class="">s</a></li>
@@ -226,7 +224,133 @@
                             </div>
                             <div class="item-card__desc">
                                 <div class="name">
-                                    <a href="" class="js-truncate-product-name">Joleene Texus Jacket for something I don’t know</a>
+                                    <a href="" class="js-truncate-product-name">Anything can be there but I’m sure that not three word of one row…ввввв</a>
+                                </div>
+                                <div class="details">
+                                    <div class="details__prices">
+                                        <div class="details__prices__wrapper">
+                                            <div class="details__prices__wrapper__actual"><span>US</span> <span>$</span><span>45.99</span></div>
+                                            <div class="details__prices__wrapper__old">50</div>
+                                        </div>
+                                        <div class="details__prices__adds">
+                                            <div class="details__prices__adds__delivery">shipping <span>$</span><span>3.99</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="details__manufacture">
+                                        <a href="" class="image" style="background-image: url('http://placehold.it/38x38')"></a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="company__details__rate">
+                                        <span class="stars">
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-empty"></i>
+                                        </span>
+                                        <!--<span class="rate">4.0</span>-->
+                                        <span class="total">(333)</span>
+                                    </div>
+                                    <div class="total-orders">Ordered <span>2955</span> times</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-card item-card--type-1">
+                            <div class="item-card__discount"></div>
+                            <div class="item-card__like"><i class="icon icon-heart"></i></div>
+                            <div class="item-card__image">
+                                <a href="" class="image" style="background-image: url('http://placehold.it/312x299')"></a>
+                                <div class="panel-sizes">
+                                    <ul>
+                                        <li><a href="" class="">s</a></li>
+                                        <li><a href="" class="">m</a></li>
+                                        <li><a href="" class="">l</a></li>
+                                        <li><a href="" class="">xl</a></li>
+                                        <li><a href="" class="">xxl</a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-actions">
+                                    <ul>
+                                        <li><a href="" class=""><i class="icon icon-search"></i></a></li>
+                                        <li><a href="" class=""><i class="icon icon-chat"></i></a></li>
+                                        <li><a href="" class=""><i class="icon icon-cart"></i></a></li>
+                                        <li><a href="" class=""><i class="icon icon-link"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-actions-short">
+                                    <ul>
+                                        <li><a href="" class="add-to-cart"><span class="span-wrapper"><span>ADD TO CART</span></span><i class="icon icon-cart"></i></a></li>
+                                        <li><a href="" class="delete"><span class="span-wrapper"><span>DELETE</span></span><i class="icon icon-delete"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item-card__desc">
+                                <div class="name">
+                                    <a href="" class="js-truncate-product-name">Anything can be there but I’m sure that not three word of one row…ввввв</a>
+                                </div>
+                                <div class="details">
+                                    <div class="details__prices">
+                                        <div class="details__prices__wrapper">
+                                            <div class="details__prices__wrapper__actual"><span>US</span> <span>$</span><span>45.99</span></div>
+                                            <div class="details__prices__wrapper__old">50</div>
+                                        </div>
+                                        <div class="details__prices__adds">
+                                            <div class="details__prices__adds__delivery">shipping <span>$</span><span>3.99</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="details__manufacture">
+                                        <a href="" class="image" style="background-image: url('http://placehold.it/38x38')"></a>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <div class="company__details__rate">
+                                        <span class="stars">
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-full"></i>
+                                            <i class="icon icon-star-empty"></i>
+                                        </span>
+                                        <!--<span class="rate">4.0</span>-->
+                                        <span class="total">(333)</span>
+                                    </div>
+                                    <div class="total-orders">Ordered <span>2955</span> times</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-card item-card--type-1">
+                            <div class="item-card__discount"></div>
+                            <div class="item-card__like"><i class="icon icon-heart"></i></div>
+                            <div class="item-card__image">
+                                <a href="" class="image" style="background-image: url('http://placehold.it/312x299')"></a>
+                                <div class="panel-sizes">
+                                    <ul>
+                                        <li><a href="" class="">s</a></li>
+                                        <li><a href="" class="">m</a></li>
+                                        <li><a href="" class="">l</a></li>
+                                        <li><a href="" class="">xl</a></li>
+                                        <li><a href="" class="">xxl</a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-actions">
+                                    <ul>
+                                        <li><a href="" class=""><i class="icon icon-search"></i></a></li>
+                                        <li><a href="" class=""><i class="icon icon-chat"></i></a></li>
+                                        <li><a href="" class=""><i class="icon icon-cart"></i></a></li>
+                                        <li><a href="" class=""><i class="icon icon-link"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="panel-actions-short">
+                                    <ul>
+                                        <li><a href="" class="add-to-cart"><span class="span-wrapper"><span>ADD TO CART</span></span><i class="icon icon-cart"></i></a></li>
+                                        <li><a href="" class="delete"><span class="span-wrapper"><span>DELETE</span></span><i class="icon icon-delete"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="item-card__desc">
+                                <div class="name">
+                                    <a href="" class="js-truncate-product-name">Anything can be there but I’m sure that not three word of one row…ввввв</a>
                                 </div>
                                 <div class="details">
                                     <div class="details__prices">
@@ -503,7 +627,17 @@
                         </a>
                     </div>
                 </section>
+            </div>
+        </div>
 
+        <div class="full-width-container">
+            <section class="parallax-ad">
+                <div class="parallax-ad__content">We can put here anything you want!<br>anything :-)</div>
+            </section>
+            <div class="parralax-ad__background"></div>
+        </div>
+        <div class="additional-container col1-layout">
+            <div class="main">
                 @@include('partials/standart.html')
             </div>
         </div>
